@@ -15,11 +15,15 @@ function Select({
         id={id}
         ref={ref}
         className={``}>
-
+          {options?.map((option) => (
+            <option key={option} value={option}>
+                {option}
+            </option>
+          ))}
         </select>
 
     </div>
   )
 }
 
-export default Select
+export default React.forwardRef(Select)
